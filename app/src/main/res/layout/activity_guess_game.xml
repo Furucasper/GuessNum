@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuessGameActivity">
+
+    <TextView
+        android:id="@+id/showText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/guessEdt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/poiret_one"
+        android:hint="Enter a number"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/guessEdt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button_circle_white"
+        android:fontFamily="@font/dosis_bold"
+        android:text="guess"
+        android:paddingBottom="7dp"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <EditText
+        android:id="@+id/guessEdt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_oneblackblack"
+        android:fontFamily="@font/changa_bold"
+        android:hint="1-100"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="#959595"
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/dosis_bold"
+        android:text="guess:\nN  U  M"
+        android:textAlignment="center"
+        android:textSize="31sp" />
+
+    <Button
+        android:id="@+id/hintButton"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/appName"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/dosis_bold"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="1dp"
+        android:text="hint"
+        android:background="@drawable/button_onesquare"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/devName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/kanit_extralight"
+        android:text="@string/dev_credit"
+        android:textSize="10sp" />
+
+</RelativeLayout>
