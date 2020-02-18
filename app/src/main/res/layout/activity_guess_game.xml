@@ -48,7 +48,7 @@
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:textColorHint="#959595"
+        android:textColorHint="@color/colorPrimary"
         android:textSize="50dp"
         tools:layout_editor_absoluteX="94dp"
         tools:layout_editor_absoluteY="255dp" />
@@ -75,7 +75,7 @@
         android:layout_marginTop="25dp"
         android:paddingBottom="1dp"
         android:text="hint"
-        android:background="@drawable/button_onesquare"
+        android:background="@drawable/button_two"
         android:textAllCaps="false"
         android:textSize="16sp" />
 
@@ -89,5 +89,60 @@
         android:fontFamily="@font/kanit_extralight"
         android:text="@string/dev_credit"
         android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/guessCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poiret_one"
+        android:text="0"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/circleTopView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="-315dp"
+        android:layout_marginRight="-100dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/button_circle_white" />
+
+    <ImageView
+        android:id="@+id/smallCircleView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/button_circle_white" />
+
+    <ImageView
+        android:id="@+id/circleButtomView1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-140dp"
+        app:srcCompat="@drawable/button_circle_white" />
+
+    <ImageView
+        android:id="@+id/circleButtomView2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-220dp"
+        app:srcCompat="@drawable/button_circle_white" />
+
+    <ImageView
+        android:id="@+id/circleButtomView3"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-300dp"
+        app:srcCompat="@drawable/button_circle_white" />
+
 
 </RelativeLayout>

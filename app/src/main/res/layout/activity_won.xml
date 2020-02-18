@@ -24,8 +24,8 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="160dp"
-        android:background="@drawable/button_onesquare"
+        android:layout_marginBottom="170dp"
+        android:background="@drawable/button_two"
         android:fontFamily="@font/dosis_bold"
         android:paddingBottom="3dp"
         android:text="Play again"
@@ -39,8 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_above="@id/textView2"
+        android:layout_marginBottom="70dp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="84dp"
         android:fontFamily="@font/dosis_bold"
         android:text="guess:\nN  U  M"
         android:textAlignment="center"
@@ -67,5 +68,44 @@
         android:fontFamily="@font/kanit_extralight"
         android:text="@string/dev_credit"
         android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/guessCountShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/youWon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/dosis_bold"
+        android:text=""
+        android:textAllCaps="true"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/circleView3"
+        android:layout_width="700dp"
+        android:layout_height="700dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="-150dp"
+        android:layout_marginLeft="-150dp"
+        app:srcCompat="@drawable/button_circle_white" />
+
+    <ImageView
+        android:id="@+id/circleView2"
+        android:layout_width="650dp"
+        android:layout_height="650dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="-125dp"
+        android:layout_marginLeft="-125dp"
+        app:srcCompat="@drawable/button_circle_white" />
+
+    <ImageView
+        android:id="@+id/circleView1"
+        android:layout_width="600dp"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="-100dp"
+        android:layout_marginLeft="-100dp"
+        app:srcCompat="@drawable/button_circle_white" />
 
 </RelativeLayout>
