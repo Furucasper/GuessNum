@@ -1,11 +1,12 @@
 package com.Furucasper.guessnum;
 
-import java.lang.Math;
+import java.util.Random;
 
 class GuessGame {
     private int ranNum;
     GuessGame(){
-        ranNum =(int) Math.floor(Math.random() * Math.floor(100))+1;
+        Random ran = new Random();
+        ranNum = ran.nextInt(100)+1;
     }
     String Guess(int guess ){
         String checkshow;

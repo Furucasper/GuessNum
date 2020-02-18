@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GuessGameActivity extends AppCompatActivity {
-    static int n = 0;
+    static int n,h;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +68,7 @@ public class GuessGameActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
+                h++;
                 if (i==0){
                     hint.setText(random.getHint());
                     i+=1;

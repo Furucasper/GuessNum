@@ -79,7 +79,7 @@
         android:fontFamily="@font/dosis_bold"
         android:text=""
         android:textAllCaps="true"
-        android:textSize="18sp" />
+        android:textSize="15sp" />
 
     <ImageView
         android:id="@+id/circleView3"
