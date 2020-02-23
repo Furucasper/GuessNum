@@ -17,13 +17,15 @@ public class WonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_won);
         Button again = findViewById(R.id.playAgainButton);
         TextView countShow = findViewById(R.id.guessCountShow);
-        if (GuessGameActivity.h==0){
-            countShow.setText("guessed "+GuessGameActivity.n+" times");
+
+        if (GuessGameActivity.hintCatch==0){ //check hint catch
+            countShow.setText("guessed "+GuessGameActivity.guessCounter+" times");
         }else{
-            countShow.setText("guessed  "+GuessGameActivity.n+" times  &  used hint");
+            countShow.setText("guessed  "+GuessGameActivity.guessCounter+" times  &  used hint");
         }
-        GuessGameActivity.h = 0;
-        GuessGameActivity.n = 0;
+        GuessGameActivity.hintCatch = 0; //reset hint catch
+        GuessGameActivity.guessCounter = 0; //reset guess counter
+
         again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

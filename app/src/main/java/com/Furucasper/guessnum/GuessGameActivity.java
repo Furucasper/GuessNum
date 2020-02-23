@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GuessGameActivity extends AppCompatActivity {
-    static int n,h;
+    static int guessCounter,hintCatch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class GuessGameActivity extends AppCompatActivity {
         final EditText inGuess = findViewById(R.id.guessEdt);
         final TextView show = findViewById(R.id.showText);
         final TextView count = findViewById(R.id.guessCount);
-        final GuessGame random = new GuessGame();
+        final GuessGame random = new GuessGame(); guessCounter=0; hintCatch=0;
         guess.setOnClickListener(new View.OnClickListener() {
 
             @SuppressLint("SetTextI18n")
@@ -40,15 +40,15 @@ public class GuessGameActivity extends AppCompatActivity {
                     if (num>=1&&num<=100){
                         String x = random.Guess(num);
                         if (x.equals("You won!")){
-                            n++;
+                            guessCounter++;
                             count.setText("");
                             startActivity(new Intent(GuessGameActivity.this,WonActivity.class));
                             inGuess.setText("");
                             finish();
                         }else {
-                            n++;
+                            guessCounter++;
                             show.setText(x);
-                            count.setText(Integer.toString(n));
+                            count.setText(Integer.toString(guessCounter));
                             inGuess.setText("");
 
                         }
@@ -68,7 +68,7 @@ public class GuessGameActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                h++;
+                hintCatch++;
                 if (i==0){
                     hint.setText(random.getHint());
                     i+=1;
@@ -83,7 +83,6 @@ public class GuessGameActivity extends AppCompatActivity {
         inGuess.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
-                    //do what you want on the press of 'done'
                     guess.performClick();
                 }
                 return false;

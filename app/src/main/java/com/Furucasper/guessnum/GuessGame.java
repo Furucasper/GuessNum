@@ -3,23 +3,22 @@ package com.Furucasper.guessnum;
 import java.util.Random;
 
 class GuessGame {
-    private int ranNum;
+    private final int ranNum;
     GuessGame(){
         Random ran = new Random();
-        ranNum = ran.nextInt(100)+1;
+        ranNum = ran.nextInt(100)+1; //random a number 1-100
     }
     String Guess(int guess ){
-        String checkshow;
         if (guess>ranNum){
-            checkshow = "Your guess is too high";
+            return "Your guess is too high";
         }else if (guess<ranNum){
-            checkshow = "Your guess is too low";
+            return "Your guess is too low";
         }else{
-            checkshow = "You won!";
+            return "You won!";
         }
-        return checkshow;
     }
 
+    //hint function
     String getHint(){ // hint is a range of random number ex. ranNum = 12 , hint : 11-15
         int y = ranNum/10;
         String x;
